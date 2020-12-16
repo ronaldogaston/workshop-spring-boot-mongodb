@@ -2,12 +2,15 @@ package com.ronaldogaston.workshopmongo.dto;
 
 import java.io.Serializable;
 
+import org.springframework.data.annotation.Id;
+
 import com.ronaldogaston.workshopmongo.domain.User;
 
 public class UserDTO implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
+	@Id
 	private String id; 
 	private String name;
 	private String email;
@@ -20,7 +23,7 @@ public class UserDTO implements Serializable {
 		name = obj.getName();
 		email = obj.getEmail();
 	}
-
+	
 	public String getId() {
 		return id;
 	}
